@@ -1,3 +1,23 @@
+- [CTO Strategic Proposal](#cto-strategic-proposal)
+  - [EV Platform Development and Digital Transformation (2025-2028)](#ev-platform-development-and-digital-transformation-2025-2028)
+    - [Executive Summary](#executive-summary)
+    - [Strategic Objectives](#strategic-objectives)
+    - [Key Success Metrics](#key-success-metrics)
+    - [Implementation Strategy](#implementation-strategy)
+      - [1. Organization Structure](#1-organization-structure)
+      - [2. Resource Planning](#2-resource-planning)
+      - [3. Technology Stack Selection](#3-technology-stack-selection)
+    - [Budget Allocation (3-Year Estimate)](#budget-allocation-3-year-estimate)
+    - [Risk Management](#risk-management)
+    - [Implementation Roadmap](#implementation-roadmap)
+      - [Phase 1: Foundation (2025)](#phase-1-foundation-2025)
+      - [Phase 2: Growth (2026)](#phase-2-growth-2026)
+      - [Phase 3: Scale (2027-2028)](#phase-3-scale-2027-2028)
+    - [Critical Success Factors](#critical-success-factors)
+    - [Next Steps](#next-steps)
+- [High-level Architecture](#high-level-architecture)
+- [Gantt Chart](#gantt-chart)
+
 # CTO Strategic Proposal
 
 ## EV Platform Development and Digital Transformation (2025-2028)
