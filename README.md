@@ -17,6 +17,7 @@
     - [Next Steps](#next-steps)
 - [High-level Architecture](#high-level-architecture)
 - [Gantt Chart](#gantt-chart)
+- [References](#references)
 
 # CTO Strategic Proposal
 
@@ -273,3 +274,9 @@ Mitigation: Agile development, modular architecture, regular market analysis
 # Gantt Chart
 
 ![Gantt Chart](./GSM-Gantt.png)
+
+# References
+
+- [Comprehensive_Strategy_for_the_CTO_Role.pdf](./Comprehensive_Strategy_for_the_CTO_Role.pdf)
+- [Architecting Trust](https://medium.com/@dao.t.anh/architecting-trust-b768072c3f76)
+- [The Role of a CTO in a FinTech Start-up: A Journey Through My Lens as a Distinguished Software Architect — Chapter 1: Introduction](https://medium.com/@dao.t.anh/the-role-of-a-cto-in-a-fintech-start-up-a-journey-through-my-lens-as-a-distinguished-software-372d40e541d1)
