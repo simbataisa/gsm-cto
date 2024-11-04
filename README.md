@@ -272,13 +272,13 @@ Mitigation: Agile development, modular architecture, regular market analysis
 
 ## High-level Architecture
 
-![High-level architecture](./GSM-Architecture.png)
+![High-level architecture](./FGF-Architecture.png)
 
 ## Gantt Chart
 
-![Gantt Chart](./GSM-Gantt.png)
+![Gantt Chart](./FGF-Gantt.png)
 
-- [Mermaid Chart](./GSM-Gantt.md)
+- [Mermaid Chart](./FGF-Gantt.md)
 
 ## References
 

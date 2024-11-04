@@ -1,0 +1,245 @@
+direction: down
+
+# Customer Applications Layer
+customer_apps: "Customer Applications" {
+  B2C: "B2C Mobile Apps/Web"
+  B2B: "B2B Portal"
+  C2C: "C2C Marketplace"
+  Partners: "Partner Portal"
+  Hosts: "Host Management Portal"
+}
+
+# Core Services Layer
+core: "Core Services" {
+  API: "API Gateway"
+  Auth: "Auth/Identity Service"
+  Payment: "Payment Processing"
+  
+  vehicle_ops: "Vehicle Operations" {
+    Vehicle: "Vehicle Management"
+    Fleet: "Fleet Management"
+    IoT: "IoT & Telematics"
+    Location: "Location Services"
+    Booking: "Booking Engine"
+    
+    carshare: "CarSharing Services" {
+      ShareCore: "CarShare Core"
+      KeyMgmt: "Digital Key Management"
+      Usage: "Usage Tracking"
+      Unlock: "Smart Access Control"
+    }
+    
+    c2b2c: "C2B2C Services" {
+      P2P: "P2P Marketplace"
+      HostMgmt: "Host Management"
+      Revenue: "Revenue Share Engine"
+      Quality: "Quality Control"
+    }
+  }
+  
+  Order: "Order Management"
+  Rental: "Rental Service"
+  Analytics: "Analytics Engine"
+}
+
+# Lending Services Layer
+lending: "Lending Services" {
+  LendCore: "Lending Core Service"
+  
+  b2c: "B2C Lending" {
+    Install: "Installment Service"
+    BNPL: "BNPL Service"
+    ConsScore: "Consumer Scoring"
+  }
+  
+  b2b: "B2B Lending" {
+    MerchLend: "Merchant Lending"
+    BizScore: "Business Scoring"
+    CollMgmt: "Collateral Management"
+  }
+  
+  LendRisk: "Lending Risk"
+  Collection: "Collection Service"
+}
+
+# Rewards & Loyalty Layer
+rewards: "Rewards & Loyalty" {
+  RewardCore: "Rewards Core Service"
+  
+  reward_types: "Reward Types" {
+    Points: "Points Engine"
+    Coupon: "Coupon Management"
+    Voucher: "Voucher System"
+  }
+  
+  Tiers: "Tier Management"
+  Benefits: "Benefits Engine"
+  VinLoyalty: "VinGroup Benefits"
+  Campaign: "Campaign Management"
+  RuleEngine: "Rules Engine"
+}
+
+# Observability & SRE Layer
+observability: "Observability & SRE" {
+  Monitor: "Monitoring Dashboard"
+  
+  obs_stack: "Observability Stack" {
+    Metrics: "Metrics Collection"
+    Logs: "Log Aggregation"
+    Traces: "Distributed Tracing"
+    APM: "Application Performance"
+  }
+  
+  sre: "SRE Tools" {
+    Alert: "Alert Management"
+    Incident: "Incident Management"
+    OnCall: "On-Call Management"
+    RunBooks: "Runbooks & Playbooks"
+  }
+  
+  health: "Platform Health" {
+    SLO: "SLO Monitoring"
+    Capacity: "Capacity Planning"
+    Chaos: "Chaos Engineering"
+    LoadTest: "Load Testing"
+  }
+}
+
+# Governance & Compliance Layer
+governance: "Governance & Compliance" {
+  GRC: "GRC Core Service"
+  
+  risk: "Risk Management" {
+    OpRisk: "Operational Risk"
+    MarketRisk: "Market Risk"
+    CreditRisk: "Credit Risk"
+    FraudRisk: "Fraud Detection"
+  }
+  
+  compliance: "Compliance" {
+    RegReport: "Regulatory Reporting"
+    KYC_AML: "KYC/AML Service"
+    DataPrivacy: "Data Privacy/PDPA"
+    RegWatch: "Regulatory Watch"
+  }
+  
+  audit: "Audit & Control" {
+    AuditLog: "Audit Logging"
+    CompControl: "Compliance Controls"
+    AccessCtrl: "Access Control"
+  }
+  
+  Policy: "Policy Management"
+}
+
+# Integration Layer
+integration: "Integration Layer" {
+  IntHub: "Integration Hub"
+  EventBus: "Event Bus"
+}
+
+# External Systems Layer
+external: "External Systems" {
+  VinGroup: "VinGroup Services"
+  VinID: "VinID System"
+  Banks: "Banking Partners"
+  KYCPartners: "KYC Partners"
+  ServicePartners: "Supply Chain/Vendors"
+  CreditBureau: "Credit Bureaus"
+  Regulators: "Regulatory Bodies"
+  Insurance: "Insurance Partners"
+}
+
+# Data Platform Layer
+data: "Data Platform" {
+  DataLake: "Data Lake"
+  DataWarehouse: "Data Warehouse"
+  ML: "ML Pipeline"
+  DataGov: "Data Governance"
+}
+
+# Connections
+
+# Customer Apps to API
+customer_apps.B2C -> core.API: "Access"
+customer_apps.B2B -> core.API: "Access"
+customer_apps.C2C -> core.API: "Access"
+customer_apps.Partners -> core.API: "Access"
+customer_apps.Hosts -> core.API: "Access"
+
+# API to Core Services
+core.API -> core.Auth: "Auth"
+core.API -> core.Payment: "Payment"
+core.API -> core.vehicle_ops.Vehicle: "Vehicle"
+core.API -> core.Order: "Order"
+core.API -> core.Rental: "Rental"
+core.API -> core.Analytics: "Analytics"
+core.API -> lending.LendCore: "Lending"
+core.API -> rewards.RewardCore: "Rewards"
+core.API -> governance.GRC: "GRC"
+
+# Vehicle Operations Connections
+core.vehicle_ops.Vehicle -> core.vehicle_ops.Fleet: "Fleet Mgmt"
+core.vehicle_ops.Vehicle -> core.vehicle_ops.IoT: "IoT Data"
+core.vehicle_ops.Vehicle -> core.vehicle_ops.Location: "Location"
+core.vehicle_ops.Vehicle -> core.vehicle_ops.Booking: "Booking"
+
+core.vehicle_ops.carshare.ShareCore -> core.vehicle_ops.carshare.KeyMgmt: "Keys"
+core.vehicle_ops.carshare.ShareCore -> core.vehicle_ops.carshare.Usage: "Usage"
+core.vehicle_ops.carshare.ShareCore -> core.vehicle_ops.carshare.Unlock: "Access"
+
+core.vehicle_ops.IoT -> core.vehicle_ops.carshare.Usage: "Track"
+core.vehicle_ops.IoT -> core.vehicle_ops.Location: "Location"
+core.vehicle_ops.IoT -> core.vehicle_ops.Vehicle: "Vehicle Data"
+
+core.vehicle_ops.c2b2c.P2P -> core.vehicle_ops.c2b2c.HostMgmt: "Host"
+core.vehicle_ops.c2b2c.P2P -> core.vehicle_ops.c2b2c.Revenue: "Revenue"
+core.vehicle_ops.c2b2c.P2P -> core.vehicle_ops.c2b2c.Quality: "Quality"
+core.vehicle_ops.c2b2c.P2P -> core.vehicle_ops.Vehicle: "Vehicle"
+
+# Observability Connections
+core.API -> observability.obs_stack.Metrics: "Metrics"
+core.API -> observability.obs_stack.Logs: "Logs"
+core.API -> observability.obs_stack.Traces: "Traces"
+core.API -> observability.obs_stack.APM: "Performance"
+
+# Integration and External Connections
+core.vehicle_ops.Vehicle -> integration.IntHub: "Integration"
+core.Payment -> integration.IntHub: "Integration"
+core.Order -> integration.IntHub: "Integration"
+core.Rental -> integration.IntHub: "Integration"
+lending.LendCore -> integration.IntHub: "Integration"
+rewards.RewardCore -> integration.IntHub: "Integration"
+core.vehicle_ops.carshare.ShareCore -> integration.IntHub: "Integration"
+core.vehicle_ops.c2b2c.P2P -> integration.IntHub: "Integration"
+
+integration.IntHub -> integration.EventBus: "Events"
+
+# External Systems Connections
+integration.EventBus -> external.VinGroup: "VinGroup"
+integration.EventBus -> external.VinID: "VinID"
+integration.EventBus -> external.Banks: "Banking"
+integration.EventBus -> external.KYCPartners: "KYC"
+integration.EventBus -> external.ServicePartners: "Partners"
+integration.EventBus -> external.CreditBureau: "Credit"
+integration.EventBus -> external.Regulators: "Regulatory"
+integration.EventBus -> external.Insurance: "Insurance"
+
+# Special Connections
+external.Insurance -> core.vehicle_ops.Vehicle: "Vehicle Insurance"
+external.Insurance -> core.vehicle_ops.carshare.ShareCore: "CarShare Insurance"
+external.Insurance -> core.vehicle_ops.c2b2c.P2P: "P2P Insurance"
+
+# Data Platform Connections
+integration.EventBus -> data.DataLake: "Data"
+data.DataLake -> data.DataWarehouse: "ETL"
+data.DataWarehouse -> data.ML: "ML"
+data.DataGov -> data.DataLake: "Governance"
+data.DataGov -> data.DataWarehouse: "Governance"
+
+data.ML -> core.Analytics: "Analytics"
+data.ML -> lending.b2c.ConsScore: "Scoring"
+data.ML -> lending.b2b.BizScore: "Scoring"
+data.ML -> rewards.Campaign: "Campaign"
+data.ML -> core.vehicle_ops.carshare.Usage: "Usage Analysis"
+data.ML -> core.vehicle_ops.c2b2c.Quality: "Quality Analysis"

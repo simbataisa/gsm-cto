@@ -1,0 +1,255 @@
+@startuml
+!theme plain
+skinparam componentStyle rectangle
+skinparam padding 2
+skinparam linetype ortho
+
+' Color definitions
+skinparam package {
+    BackgroundColor<<Customer>> #E8F5E9
+    BackgroundColor<<Core>> #E3F2FD
+    BackgroundColor<<Vehicle>> #F3E5F5
+    BackgroundColor<<Lending>> #FFF3E0
+    BackgroundColor<<Rewards>> #FBE9E7
+    BackgroundColor<<Observability>> #EFEBE9
+    BackgroundColor<<Governance>> #F5F5F5
+    BackgroundColor<<Integration>> #E0F7FA
+    BackgroundColor<<External>> #FFF8E1
+    BackgroundColor<<Data>> #F3E5F5
+}
+
+skinparam component {
+    BackgroundColor #FFFFFF
+    BorderColor #2196F3
+    ArrowColor #757575
+}
+
+package "Customer Applications" <<Customer>> {
+    [B2C Mobile Apps/Web] as B2C #97DC95
+    [B2B Portal] as B2B #97DC95
+    [C2C Marketplace] as C2C #97DC95
+    [Partner Portal] as Partners #97DC95
+    [Host Management Portal] as Hosts #97DC95
+}
+
+package "Core Services" <<Core>> {
+    [API Gateway] as API #64B5F6
+    [Auth/Identity Service] as Auth #64B5F6
+    [Payment Processing] as Payment #64B5F6
+    [Order Management] as Order #64B5F6
+    [Rental Service] as Rental #64B5F6
+    [Analytics Engine] as Analytics #64B5F6
+
+    package "Vehicle Operations" <<Vehicle>> {
+        [Vehicle Management] as Vehicle #CE93D8
+        [Fleet Management] as Fleet #CE93D8
+        [IoT & Telematics] as IoT #CE93D8
+        [Location Services] as Location #CE93D8
+        [Booking Engine] as Booking #CE93D8
+
+        package "CarSharing Services" {
+            [CarShare Core] as ShareCore #CE93D8
+            [Digital Key Management] as KeyMgmt #CE93D8
+            [Usage Tracking] as Usage #CE93D8
+            [Smart Access Control] as Unlock #CE93D8
+        }
+
+        package "C2B2C Services" {
+            [P2P Marketplace] as P2P #CE93D8
+            [Host Management] as HostMgmt #CE93D8
+            [Revenue Share Engine] as Revenue #CE93D8
+            [Quality Control] as Quality #CE93D8
+        }
+    }
+}
+
+package "Lending Services" <<Lending>> {
+    [Lending Core Service] as LendCore #FFB74D
+
+    package "B2C Lending" {
+        [Installment Service] as Install #FFB74D
+        [BNPL Service] as BNPL #FFB74D
+        [Consumer Scoring] as ConsScore #FFB74D
+    }
+
+    package "B2B Lending" {
+        [Merchant Lending] as MerchLend #FFB74D
+        [Business Scoring] as BizScore #FFB74D
+        [Collateral Management] as CollMgmt #FFB74D
+    }
+
+    [Lending Risk] as LendRisk #FFB74D
+    [Collection Service] as Collection #FFB74D
+}
+
+package "Rewards & Loyalty" <<Rewards>> {
+    [Rewards Core Service] as RewardCore #FF8A65
+
+    package "Reward Types" {
+        [Points Engine] as Points #FF8A65
+        [Coupon Management] as Coupon #FF8A65
+        [Voucher System] as Voucher #FF8A65
+    }
+
+    [Tier Management] as Tiers #FF8A65
+    [Benefits Engine] as Benefits #FF8A65
+    [VinGroup Benefits] as VinLoyalty #FF8A65
+    [Campaign Management] as Campaign #FF8A65
+    [Rules Engine] as RuleEngine #FF8A65
+}
+
+package "Observability & SRE" <<Observability>> {
+    [Monitoring Dashboard] as Monitor #BCAAA4
+
+    package "Observability Stack" {
+        [Metrics Collection] as Metrics #BCAAA4
+        [Log Aggregation] as Logs #BCAAA4
+        [Distributed Tracing] as Traces #BCAAA4
+        [Application Performance] as APM #BCAAA4
+    }
+
+    package "SRE Tools" {
+        [Alert Management] as Alert #BCAAA4
+        [Incident Management] as Incident #BCAAA4
+        [On-Call Management] as OnCall #BCAAA4
+        [Runbooks & Playbooks] as RunBooks #BCAAA4
+    }
+
+    package "Platform Health" {
+        [SLO Monitoring] as SLO #BCAAA4
+        [Capacity Planning] as Capacity #BCAAA4
+        [Chaos Engineering] as Chaos #BCAAA4
+        [Load Testing] as LoadTest #BCAAA4
+    }
+}
+
+package "Governance & Compliance" <<Governance>> {
+    [GRC Core Service] as GRC #E0E0E0
+
+    package "Risk Management" {
+        [Operational Risk] as OpRisk #E0E0E0
+        [Market Risk] as MarketRisk #E0E0E0
+        [Credit Risk] as CreditRisk #E0E0E0
+        [Fraud Detection] as FraudRisk #E0E0E0
+    }
+
+    package "Compliance" {
+        [Regulatory Reporting] as RegReport #E0E0E0
+        [KYC/AML Service] as KYC_AML #E0E0E0
+        [Data Privacy/PDPA] as DataPrivacy #E0E0E0
+        [Regulatory Watch] as RegWatch #E0E0E0
+    }
+
+    package "Audit & Control" {
+        [Audit Logging] as AuditLog #E0E0E0
+        [Compliance Controls] as CompControl #E0E0E0
+        [Access Control] as AccessCtrl #E0E0E0
+    }
+
+    [Policy Management] as Policy #E0E0E0
+}
+
+package "Integration Layer" <<Integration>> {
+    [Integration Hub] as IntHub #80DEEA
+    [Event Bus] as EventBus #80DEEA
+}
+
+package "External Systems" <<External>> {
+    [VinGroup Services] as VinGroup #FFE082
+    [VinID System] as VinID #FFE082
+    [Banking Partners] as Banks #FFE082
+    [KYC Partners] as KYCPartners #FFE082
+    [Supply Chain/Vendors] as ServicePartners #FFE082
+    [Credit Bureaus] as CreditBureau #FFE082
+    [Regulatory Bodies] as Regulators #FFE082
+    [Insurance Partners] as Insurance #FFE082
+}
+
+package "Data Platform" <<Data>> {
+    [Data Lake] as DataLake #CE93D8
+    [Data Warehouse] as DataWarehouse #CE93D8
+    [ML Pipeline] as ML #CE93D8
+    [Data Governance] as DataGov #CE93D8
+}
+
+' Connections remain the same as before
+' Customer Apps to API
+B2C --> API : "REST/GraphQL"
+B2B --> API : "REST/GraphQL"
+C2C --> API : "REST/GraphQL"
+Partners --> API : "REST/GraphQL"
+Hosts --> API : "REST/GraphQL"
+
+' API to Core Services
+API --> Auth : "Authentication"
+API --> Payment : "Payments"
+API --> Vehicle : "Vehicle Ops"
+API --> Order : "Orders"
+API --> Rental : "Rentals"
+API --> Analytics : "Analytics"
+API --> LendCore : "Lending"
+API --> RewardCore : "Rewards"
+API --> GRC : "Compliance"
+
+' Vehicle Operations
+Vehicle --> Fleet : "Fleet Mgmt"
+Vehicle --> IoT : "IoT Data"
+Vehicle --> Location : "Location"
+Vehicle --> Booking : "Bookings"
+
+ShareCore --> KeyMgmt : "Key Mgmt"
+ShareCore --> Usage : "Usage"
+ShareCore --> Unlock : "Access"
+
+IoT --> Usage : "Track"
+IoT --> Location : "Location"
+IoT --> Vehicle : "Vehicle Data"
+
+P2P --> HostMgmt : "Host Mgmt"
+P2P --> Revenue : "Revenue"
+P2P --> Quality : "Quality"
+P2P --> Vehicle : "Vehicles"
+
+' Core Integrations
+Vehicle ..> IntHub : "Events"
+Payment ..> IntHub : "Events"
+Order ..> IntHub : "Events"
+Rental ..> IntHub : "Events"
+LendCore ..> IntHub : "Events"
+RewardCore ..> IntHub : "Events"
+ShareCore ..> IntHub : "Events"
+P2P ..> IntHub : "Events"
+
+IntHub --> EventBus : "Event Stream"
+
+' External Systems Integration
+EventBus --> VinGroup : "Integration"
+EventBus --> VinID : "Integration"
+EventBus --> Banks : "Integration"
+EventBus --> KYCPartners : "Integration"
+EventBus --> ServicePartners : "Integration"
+EventBus --> CreditBureau : "Integration"
+EventBus --> Regulators : "Integration"
+EventBus --> Insurance : "Integration"
+
+' Insurance Connections
+Insurance --> Vehicle : "Vehicle Insurance"
+Insurance --> ShareCore : "CarShare Insurance"
+Insurance --> P2P : "P2P Insurance"
+
+' Data Platform Flow
+EventBus --> DataLake : "Data Ingestion"
+DataLake --> DataWarehouse : "ETL"
+DataWarehouse --> ML : "ML Training"
+DataGov --> DataLake : "Governance"
+DataGov --> DataWarehouse : "Governance"
+
+' ML Outputs
+ML --> Analytics : "Analytics"
+ML --> ConsScore : "Scoring"
+ML --> BizScore : "Scoring"
+ML --> Campaign : "Campaign"
+ML --> Usage : "Usage Analysis"
+ML --> Quality : "Quality Analysis"
+
+@enduml
