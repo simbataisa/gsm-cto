@@ -1,3 +1,5 @@
+# CTO Strategic Proposal
+
 - [CTO Strategic Proposal](#cto-strategic-proposal)
   - [EV Platform Development and Digital Transformation (2025-2028)](#ev-platform-development-and-digital-transformation-2025-2028)
     - [Executive Summary](#executive-summary)
@@ -18,8 +20,6 @@
 - [High-level Architecture](#high-level-architecture)
 - [Gantt Chart](#gantt-chart)
 - [References](#references)
-
-# CTO Strategic Proposal
 
 ## EV Platform Development and Digital Transformation (2025-2028)
 
@@ -169,26 +169,29 @@ Total 3-Year Budget: $41M
 ### Risk Management
 
 1. Technical Risks:
+
    - Scalability challenges
    - Integration complexity
    - Technical debt
    - Security vulnerabilities
 
-Mitigation: Architecture reviews, security audits, regular technical debt sprints
+   Mitigation: Architecture reviews, security audits, regular technical debt sprints
 
 2. Team Risks:
+
    - Talent acquisition
    - Knowledge retention
    - Team scaling
 
-Mitigation: Competitive packages, training programs, documentation culture
+   Mitigation: Competitive packages, training programs, documentation culture
 
 3. Operational Risks:
+
    - Service disruptions
    - Data breaches
    - Compliance issues
 
-Mitigation: SRE practices, security-first approach, compliance automation
+   Mitigation: SRE practices, security-first approach, compliance automation
 
 4. Market Risks:
    - Changing regulations
@@ -274,6 +277,8 @@ Mitigation: Agile development, modular architecture, regular market analysis
 # Gantt Chart
 
 ![Gantt Chart](./GSM-Gantt.png)
+
+- [Mermaid Chart](./GSM-Gantt.md)
 
 # References
 
