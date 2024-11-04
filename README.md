@@ -17,9 +17,9 @@
       - [Phase 3: Scale (2027-2028)](#phase-3-scale-2027-2028)
     - [Critical Success Factors](#critical-success-factors)
     - [Next Steps](#next-steps)
-- [High-level Architecture](#high-level-architecture)
-- [Gantt Chart](#gantt-chart)
-- [References](#references)
+  - [High-level Architecture](#high-level-architecture)
+  - [Gantt Chart](#gantt-chart)
+  - [References](#references)
 
 ## EV Platform Development and Digital Transformation (2025-2028)
 
@@ -270,17 +270,17 @@ Mitigation: Agile development, modular architecture, regular market analysis
    - Security implementation
    - Team expansion
 
-# High-level Architecture
+## High-level Architecture
 
 ![High-level architecture](./GSM-Architecture.png)
 
-# Gantt Chart
+## Gantt Chart
 
 ![Gantt Chart](./GSM-Gantt.png)
 
 - [Mermaid Chart](./GSM-Gantt.md)
 
-# References
+## References
 
 - [Comprehensive_Strategy_for_the_CTO_Role.pdf](./Comprehensive_Strategy_for_the_CTO_Role.pdf)
 - [Architecting Trust](https://medium.com/@dao.t.anh/architecting-trust-b768072c3f76)
