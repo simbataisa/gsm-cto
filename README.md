@@ -1,67 +1,89 @@
 # CTO Strategic Proposal
 
-- [CTO Strategic Proposal](#cto-strategic-proposal)
-  - [EV Platform Development and Digital Transformation (2025-2028)](#ev-platform-development-and-digital-transformation-2025-2028)
-    - [Executive Summary](#executive-summary)
-    - [Strategic Objectives](#strategic-objectives)
-    - [Key Success Metrics](#key-success-metrics)
-    - [Implementation Strategy](#implementation-strategy)
-      - [1. Organization Structure](#1-organization-structure)
-      - [2. Resource Planning](#2-resource-planning)
-      - [3. Technology Stack Selection](#3-technology-stack-selection)
-    - [Budget Allocation (3-Year Estimate)](#budget-allocation-3-year-estimate)
-    - [Risk Management](#risk-management)
-    - [Implementation Roadmap](#implementation-roadmap)
-      - [Phase 1: Foundation (2025)](#phase-1-foundation-2025)
-      - [Phase 2: Growth (2026)](#phase-2-growth-2026)
-      - [Phase 3: Scale (2027-2028)](#phase-3-scale-2027-2028)
-    - [Critical Success Factors](#critical-success-factors)
-    - [Next Steps](#next-steps)
-  - [High-level Architecture](#high-level-architecture)
-  - [Gantt Chart](#gantt-chart)
-  - [References](#references)
-
-## EV Platform Development and Digital Transformation (2025-2028)
+## Comprehensive EV Mobility Ecosystem (2025-2028)
 
 ### Executive Summary
 
-This proposal outlines a comprehensive three-year strategy to build and scale a state-of-the-art EV platform serving both B2B and B2C markets. The platform will initially serve Vietnam before expanding across SEA and globally, integrating with VinGroup's ecosystem while maintaining world-class standards in technology, security, and compliance.
+This proposal presents a comprehensive three-year strategy to build and scale a next-generation mobility ecosystem for the Vietnamese and Southeast Asian markets. Our vision encompasses:
+
+1. Core Capabilities:
+
+   - EV Platform (B2B/B2C)
+   - CarSharing Services
+   - C2B2C Marketplace
+   - Financial Services (Lending/BNPL)
+   - Rewards & Loyalty Program
+
+2. Market Approach:
+
+   - Initial focus on Vietnam
+   - Expansion to SEA markets
+   - Deep integration with VinGroup ecosystem
+   - Global platform standards
+
+3. Key Differentiators:
+   - Comprehensive mobility solutions
+   - Integrated financial services
+   - IoT-enabled smart features
+   - Data-driven operations
 
 ### Strategic Objectives
 
-1. Build a scalable, secure, and compliant EV platform
-2. Establish market leadership in Vietnam
-3. Enable regional expansion across SEA
-4. Create a comprehensive mobility ecosystem
-5. Achieve operational excellence through technology
+1. Business Objectives:
 
-### Key Success Metrics
+   - Establish market leadership in Vietnam's EV ecosystem
+   - Create SEA's largest EV sharing network
+   - Enable peer-to-peer vehicle sharing economy
+   - Drive financial inclusion through lending products
+   - Build sustainable mobility ecosystem
 
-1. Technical KPIs
+2. Technical Objectives:
+   - Build scalable, secure platform architecture
+   - Implement IoT-enabled fleet management
+   - Develop AI-driven operational efficiency
+   - Ensure regulatory compliance across markets
+   - Achieve technical excellence in operations
 
-   - Platform Reliability: 99.99% uptime
+### Success Metrics
+
+1. Platform Performance:
+
+   - System Availability: 99.99%
    - API Response Time: <100ms (p95)
-   - Transaction Success Rate: >99.9%
-   - Security Incidents: Zero critical breaches
-   - Release Frequency: Weekly deployments
+   - Transaction Success: >99.9%
+   - Security: Zero critical incidents
+   - Release Cadence: Weekly
 
-2. Business KPIs
-   - User Acquisition Cost reduction: 25%
-   - Customer Satisfaction Score: >4.5/5
-   - Platform Adoption Rate: 40% YoY growth
-   - Transaction Volume: 50% YoY growth
-   - Partner Integration Time: <4 weeks
+2. Business Performance:
+
+   - Vehicle Utilization: >40%
+   - User Satisfaction: >4.5/5
+   - Host Retention: >80%
+   - Cross-service Usage: 30%
+   - Revenue Growth: >50% YoY
+
+3. Operational Excellence:
+   - Fleet Availability: >95%
+   - Support Response: <30 minutes
+   - Issue Resolution: <24 hours
+   - Quality Score: >4.3/5
 
 ### Implementation Strategy
 
-#### 1. Organization Structure
+#### 1. Organizational Structure
 
 ```
 CTO Office
 ├── Platform Engineering
 │   ├── Core Services Team
 │   ├── Frontend Team (Mobile & Web)
-│   └── API & Integration Team
+│   ├── API & Integration Team
+│   ├── CarSharing Platform Team
+│   └── Marketplace Platform Team
+├── IoT & Hardware
+│   ├── IoT Development Team
+│   ├── Hardware Integration Team
+│   └── Smart Access Team
 ├── Infrastructure & Security
 │   ├── DevOps & SRE Team
 │   ├── Security Team
@@ -69,161 +91,211 @@ CTO Office
 ├── Data & AI
 │   ├── Data Engineering Team
 │   ├── Data Science Team
-│   └── ML Operations Team
+│   ├── ML Operations Team
+│   └── IoT Analytics Team
 └── Quality & Compliance
     ├── QA & Automation Team
     ├── GRC Team
     └── Technical Documentation Team
 ```
 
-#### 2. Resource Planning
+#### 2. Phased Team Growth
 
-Phase 1 (2025 H1): Foundation Team
+Phase 1 (2025 H1): 28 Staff
 
-- 1 Chief Architect
-- 2 Technical Product Managers
-- 8 Senior Backend Engineers
-- 6 Frontend Engineers (3 Mobile, 3 Web)
-- 4 DevOps/SRE Engineers
-- 2 Security Engineers
-- 4 QA Engineers
-  Total: 27 technical staff
+- Leadership: 4
+- Platform Engineering: 12
+- IoT & Hardware: 4
+- Infrastructure & Security: 4
+- Quality & Compliance: 4
 
-Phase 2 (2025 H2): Scale Team
+Phase 2 (2025 H2): 45 Staff
 
-- 4 Additional Backend Engineers
-- 4 Additional Frontend Engineers
-- 2 Data Engineers
-- 2 ML Engineers
-- 2 Additional DevOps Engineers
-- 2 Additional QA Engineers
-  Total: 43 technical staff
+- Additional Leadership: 2
+- Platform Engineering: +6
+- IoT & Hardware: +3
+- Data & AI: +4
+- Quality & Support: +2
 
-Phase 3 (2026): Full Scale
+Phase 3 (2026): 85 Staff
 
-- Platform Teams: 60+ engineers
-- Data & AI Teams: 20+ specialists
-- Operations & Support: 20+ staff
-  Total: 100+ technical staff
+- Additional Leadership: 3
+- Platform Engineering: +12
+- IoT & Hardware: +6
+- Infrastructure & Security: +6
+- Data & AI: +8
+- Quality & Compliance: +5
 
-#### 3. Technology Stack Selection
+#### 3. Technology Architecture
 
-Core Platform:
+1. Core Platform:
 
-- Backend: Java (Spring Boot), Go
-- Frontend: React Native, React.js
-- API: GraphQL, REST
-- Database: PostgreSQL, MongoDB
-- Cache: Redis
-- Message Queue: Kafka
+   - Backend: Java (Spring Boot), Go
+   - Frontend: React Native, React.js
+   - API: GraphQL, REST
+   - Database: PostgreSQL, MongoDB
+   - Cache: Redis
+   - Message Queue: Kafka
 
-Infrastructure:
+2. IoT Stack:
 
-- Cloud: Multi-cloud strategy (AWS primary)
-- Containers: Kubernetes
-- CI/CD: GitLab, ArgoCD
-- Monitoring: Prometheus, Grafana, ELK Stack
-- APM: New Relic/Datadog
+   - Platform: AWS IoT Core
+   - Connectivity: MQTT, LTE-M
+   - Edge Computing: AWS Greengrass
+   - Device Security: HSM
+   - Analytics: AWS IoT Analytics
 
-Security:
+3. Infrastructure:
 
-- IAM: Keycloak
-- WAF: Cloudflare
-- SIEM: Splunk
-- Secrets: HashiCorp Vault
+   - Cloud: AWS (Primary)
+   - Containers: Kubernetes
+   - CI/CD: GitLab, ArgoCD
+   - Monitoring: Prometheus, Grafana
+   - APM: New Relic
 
-Data Platform:
+4. Security:
 
-- Processing: Apache Spark
-- Warehouse: Snowflake
-- ML Ops: Kubeflow
-- Analytics: Looker/Tableau
+   - IAM: Keycloak
+   - WAF: Cloudflare
+   - SIEM: Splunk
+   - Secrets: HashiCorp Vault
 
-### Budget Allocation (3-Year Estimate)
+5. Data Platform:
+   - Processing: Apache Spark
+   - Warehouse: Snowflake
+   - ML Ops: Kubeflow
+   - Analytics: Looker
 
-1. Personnel Costs (45%):
+### Implementation Roadmap
 
-   - Engineering Teams: $15M
-   - Leadership & Management: $3M
+#### Phase 1: Foundation (2025 H1)
+
+1. Core Platform Development:
+
+   - Basic service architecture
+   - Authentication & authorization
+   - Payment integration
+   - Basic fleet management
+   - MVP features
+
+2. IoT Infrastructure:
+
+   - Device management
+   - Telematics integration
+   - Basic monitoring
+   - Security framework
+
+3. Quality & Security:
+   - CI/CD pipeline
+   - Security controls
+   - Testing framework
+   - Basic monitoring
+
+#### Phase 2: Growth (2025 H2)
+
+1. Advanced Features:
+
+   - CarSharing platform
+   - C2B2C marketplace
+   - Lending services
+   - Rewards program
+
+2. Platform Enhancement:
+
+   - Advanced analytics
+   - ML capabilities
+   - Advanced security
+   - Performance optimization
+
+3. Market Operations:
+   - Vietnam launch
+   - Operations dashboard
+   - Customer support
+   - Partner integration
+
+#### Phase 3: Scale (2026)
+
+1. Regional Expansion:
+
+   - Multi-country support
+   - Localization framework
+   - Cross-border capabilities
+   - Regional compliance
+
+2. Advanced Capabilities:
+
+   - AI-driven operations
+   - Predictive maintenance
+   - Advanced fraud detection
+   - Automated operations
+
+3. Ecosystem Development:
+   - Partner API platform
+   - Developer portal
+   - Marketplace expansion
+   - Integration hub
+
+### Budget Summary (3-Year)
+
+1. Personnel Costs (50%): $18M
+
+   - Direct Salaries: $14M
+   - Benefits & Insurance: $2M
    - Training & Development: $1M
+   - Performance Bonuses: $1M
 
-2. Infrastructure & Tools (25%):
+2. Infrastructure & Tools (20%): $7M
 
-   - Cloud Infrastructure: $5M
-   - Software Licenses: $3M
-   - Development Tools: $2M
+   - Cloud Infrastructure: $4M
+   - Software Licenses: $2M
+   - Development Tools: $1M
 
-3. Security & Compliance (15%):
+3. IoT & Hardware (15%): $5M
 
-   - Security Tools & Audits: $2.5M
-   - Compliance Certifications: $2M
-   - Security Operations: $1.5M
+   - IoT Infrastructure: $2.5M
+   - Hardware Devices: $1.5M
+   - Network Connectivity: $1M
 
-4. R&D and Innovation (15%):
-   - Research Projects: $3M
-   - Innovation Lab: $2M
-   - POCs & Experiments: $1M
+4. Security & Compliance (8%): $3M
 
-Total 3-Year Budget: $41M
+   - Security Tools & Audits: $1.5M
+   - Compliance Certifications: $1M
+   - Security Operations: $0.5M
+
+5. R&D and Innovation (7%): $2M
+   - Research Projects: $1M
+   - Innovation Lab: $0.5M
+   - POCs & Experiments: $0.5M
+
+Total 3-Year Budget: $35M
 
 ### Risk Management
 
 1. Technical Risks:
-
    - Scalability challenges
    - Integration complexity
    - Technical debt
    - Security vulnerabilities
 
-   Mitigation: Architecture reviews, security audits, regular technical debt sprints
+Mitigation: Architecture reviews, security audits, technical debt sprints
 
-2. Team Risks:
-
-   - Talent acquisition
-   - Knowledge retention
-   - Team scaling
-
-   Mitigation: Competitive packages, training programs, documentation culture
-
-3. Operational Risks:
-
+2. Operational Risks:
    - Service disruptions
    - Data breaches
    - Compliance issues
+   - Quality control
 
-   Mitigation: SRE practices, security-first approach, compliance automation
+Mitigation: SRE practices, security-first approach, compliance automation
 
-4. Market Risks:
-   - Changing regulations
-   - Market competition
-   - Technology changes
+3. Market Risks:
+   - Adoption rates
+   - Competition
+   - Regulatory changes
+   - Market conditions
 
 Mitigation: Agile development, modular architecture, regular market analysis
 
-### Implementation Roadmap
-
-#### Phase 1: Foundation (2025)
-
-- Core team formation
-- Basic platform development
-- Vietnam market launch
-- Essential integrations
-
-#### Phase 2: Growth (2026)
-
-- Feature expansion
-- Data platform development
-- AI/ML implementation
-- Regional preparation
-
-#### Phase 3: Scale (2027-2028)
-
-- Global platform optimization
-- Advanced AI capabilities
-- Multi-country operations
-- Innovation programs
-
-### Critical Success Factors
+### Success Factors
 
 1. Leadership Support:
 
@@ -250,25 +322,25 @@ Mitigation: Agile development, modular architecture, regular market analysis
 
 ### Next Steps
 
-1. Immediate Actions (Next 30 Days):
+1. Immediate (30 Days):
 
    - Leadership team formation
-   - Detailed project planning
    - Initial team recruitment
-   - Infrastructure setup
+   - Infrastructure planning
+   - Architecture design
 
-2. Short Term (90 Days):
+2. Short-term (90 Days):
 
    - Core team onboarding
-   - Architecture finalization
    - Development kickoff
-   - Process establishment
+   - MVP planning
+   - Partner engagement
 
-3. Medium Term (180 Days):
+3. Medium-term (180 Days):
    - MVP development
    - Initial testing
-   - Security implementation
-   - Team expansion
+   - Market preparation
+   - Operations setup
 
 ## High-level Architecture
 
